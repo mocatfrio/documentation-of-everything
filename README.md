@@ -1,2 +1,2 @@
-# how_to
-personal notes
+# How to ...
+* [How to Postgres](db/psql.md)
