@@ -1,2 +1,2 @@
 # How to ...
-* [How to Postgres](db/psql.md)
+* [How to PostgreSQL](db/psql.md)
