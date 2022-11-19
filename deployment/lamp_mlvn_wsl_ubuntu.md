@@ -17,14 +17,14 @@ Environment:
 
 ## Installation
 
-LAMP stands for Linux, Apache, MySQL, and PHP. While, MLVN stands for MongoDB, Laravel, VueJS, and NodeJS :).
+LAMP stands for Linux, Apache, MySQL, and PHP. While, MLVN stands for MongoDB, Laravel, VueJS, and NodeJS, Lol :) 
 
 What to install:
 * Apache2
 * PHP 7.4
 * Composer and Laravel
 * MySQL and PhpMyAdmin
-* MongoDB and MongoDBCompass
+* MongoDB and MongoDBCompass / Robo3T
 * NodeJS and NPM
 
 Preparation:
@@ -274,7 +274,7 @@ I got stuck and had trouble installing docker on WSL because of a "systemctl" is
 System has not been booted with systemd as init system (PID 1). Cant operate.
 Failed to connect to bus: Host is down
 ``` 
-Then, I got another option from a reference, which is to use Docker to provide MongoDB services. However, Fu said *"Why Docker? it's too heavy for just a mongo"*. Okay I'll try again, next time, without Docker.
+Then, I got another option from [here](https://askubuntu.com/questions/1379425/), which is to use Docker to provide MongoDB services. However, Fu said *"Why Docker? it's too heavy for just a mongo"*. Okay I'll try again, next time, without Docker.
 
 1. Install Docker
 
@@ -314,14 +314,14 @@ Then, I got another option from a reference, which is to use Docker to provide M
     hello-world   latest    feb5d9fea6a5   14 months ago   13.3kB
     ```
 
-2. Install MongoDB in Docker
+5. Install MongoDB in Docker
 
     ```bash
     docker pull mongo 
     docker run --name mongo_example -d mongo
     ```
 
-3. Test again:)
+6. Test again:)
    
     ```bash
     $ docker ps
@@ -338,7 +338,7 @@ Then, I got another option from a reference, which is to use Docker to provide M
     > show dbs
     ```
 
-4. Mounting host system directory in MongoDB docker container
+7. Mounting host system directory in MongoDB docker container
 
     ```bash
     # Make local data directory
@@ -349,7 +349,7 @@ Then, I got another option from a reference, which is to use Docker to provide M
     docker run -it -p 90:90 -p 27017:27017 -v ~/mongodb_data_directory:/data/db --name mongo_dev -d mongo
     ```
 
-5. Test
+8. Test
 
     Install MongoDB GUI in Windows, such as MongoDB Compass or Robo3T. Then try to connect  to `mongodb://localhost:27017`.
 
@@ -578,13 +578,13 @@ In short, here are the steps of web deployment:
     php artisan key:generate
     ```
 
-2. Fix issue - oauth-public.key not readable
+2. Fix issue - oauth-public.key does not exist 
     
     ```bash
     Key path "file:///var/www/html/mcms-lp/storage/oauth-public.key" does not exist or is not readable
     ```
 
-    * Make new project Laravel
+    * Make new Laravel project 
         ```bash 
         sudo composer create-project --prefer-dist laravel/laravel example
         sudo chown -R mocatfrio example
@@ -600,7 +600,8 @@ In short, here are the steps of web deployment:
         # Edit
         DB_DATABASE=test
         DB_USERNAME=root
-        DB_PASSWORD=password```
+        DB_PASSWORD=password
+        ```
 
     * Install passport
 
@@ -614,8 +615,8 @@ In short, here are the steps of web deployment:
         php artisan passport:install
         ```
         
-    * Copy generated key to the original project
-    * 
+    * Copy the generated key to the original project
+  
         ```bash
         cd storage/
         cp *.key /var/www/html/mcms-lp/storage/
