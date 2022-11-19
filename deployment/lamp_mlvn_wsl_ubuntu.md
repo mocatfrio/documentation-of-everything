@@ -267,7 +267,7 @@ To simplify database management, we need to install GUI for MySQL, in this case 
 
 ### MongoDB
 
-I got stuck and had trouble installing docker on WSL because of a "systemctl" issue.
+I got stuck and had problem when installing docker on WSL because of a "systemctl" issue.
 
 ``` bash
 > sudo systemctl start mongod
