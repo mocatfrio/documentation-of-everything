@@ -1,6 +1,6 @@
 # Develop LAMP + MLVN Stack in Windows Subsystem for Linux (WSL) Ubuntu 18.04
 
-My personal documentation about **Linepipe Tubestream** web deployment in a local server.
+A documentation of **Linepipe Tubestream** web deployment on local.
 
 ```
 by: mocatfrio (hafarafirdausi@gmail.com)
